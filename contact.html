@@ -37,8 +37,8 @@
         <div class="container">
             <div class="section-title text-left">
                 <h3>Contact</h3>
-                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.
-                </p>
+                <!-- <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.
+                </p> -->
             </div><!-- end title -->
             <div class="row">
                 <div class="col-md-12">
@@ -91,32 +91,6 @@
     
 
     <!-- JavaScript -->
-    <script>
-        // Get the form element
-        var form = document.getElementById('contactForm');
-
-        // Add a submit event listener to the form
-        form.addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevent the default form submission
-
-            // Get form inputs
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var phone = document.getElementById('phone').value;
-            var message = document.getElementById('message').value;
-
-            // Log form details to the console
-            console.log('Name:', name);
-            console.log('Email:', email);
-            console.log('Phone:', phone);
-            console.log('Message:', message);
-
-            // Send form data to Google Sheets using Google Apps Script
-            google.script.run.submitForm(name, email, phone, message);
-
-            // You can perform any other actions here, like showing a success message or redirecting the user
-        });
-    </script>
 </body>
 </html>
 

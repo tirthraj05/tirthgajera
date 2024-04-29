@@ -18,11 +18,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="js/modernizr.js"></script>
     <style>
-        body {
+        /* body {
             margin: 0;
             padding: 0;
             background: #ebebeb;
-        }
+        } */
+
+        body {
+        background-image: url(images/bg.jpg); 
+        background-size: cover; /* Ensures the image covers the entire background */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+         }
+
         #contact {
             background: rgba(255, 255, 255, 0.9);
             padding: 50px 20px;
@@ -197,12 +205,14 @@
 </head>
 
 <body>
+    
     <div class="container">
         <div id="contact" class="section db">
             <div class="row">
                 <div class="col-md-12">
                     <div class="contact_form">
                         <form id="contactForm" novalidate>
+                            <h3 style="color: #404040; font-size: 29px; text-align: center;">Contact Me</h3>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
