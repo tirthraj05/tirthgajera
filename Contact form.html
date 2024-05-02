@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Tirth Gajera</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
     <link rel="shortcut icon" href="images/tg.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -18,11 +14,120 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="js/modernizr.js"></script>
     <style>
-        /* body {
-            margin: 0;
+        body {
+            background-image: url('images/bg.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #contact {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 50px 20px;
+            border-radius: 10px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        .contact_form {
+            margin-top: 20px;
+        }
+        .footer-distributed {
+            text-align: center;
+            background-color: #333;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .footer-links a:hover {
+            color: #ffd700;
+        }
+        .footer-company-name {
+            color: #fff;
+        }
+
+        /* Social Media Button Styles */
+        ul.social-icons {
+            list-style-type: none;
             padding: 0;
-            background: #ebebeb;
-        } */
+            text-align: center;
+            margin-top: 20px;
+        }
+        ul.social-icons li {
+            display: inline-block;
+            margin: 0 5px;
+        }
+        ul.social-icons li a {
+            display: inline-block;
+            position: relative;
+            width: 40px; /* Smaller size */
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #404040;
+            margin: 0 5px;
+            transition: .5s;
+            border-radius: 50%; /* Circular buttons */
+            overflow: hidden;
+        }
+        ul.social-icons li a i {
+            transition: color 0.5s;
+        }
+        ul.social-icons li a span {
+            position: absolute;
+            display: block;
+            background: #404040;
+        }
+        /* Top and bottom bars */
+        ul.social-icons li a span:nth-child(1), ul.social-icons li a span:nth-child(3) {
+            width: 100%;
+            height: 2px;
+            left: 0;
+            transition: transform 0.5s;
+        }
+        ul.social-icons li a span:nth-child(1) {
+            top: 0;
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+        ul.social-icons li a span:nth-child(3) {
+            bottom: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+        }
+        /* Side bars */
+        ul.social-icons li a span:nth-child(2), ul.social-icons li a span:nth-child(4) {
+            width: 2px;
+            height: 100%;
+            top: 0;
+            transition: transform 0.5s;
+        }
+        ul.social-icons li a span:nth-child(2) {
+            left: 0;
+            transform: scaleY(0);
+            transform-origin: top;
+        }
+        ul.social-icons li a span:nth-child(4) {
+            right: 0;
+            transform: scaleY(0);
+            transform-origin: bottom;
+        }
+        ul.social-icons li a:hover span {
+            transform: scale(1);
+        }
+        ul.social-icons li a:hover i {
+            color: #fff;
+        }
+
+        /* --------- */
 
         body {
         background-image: url(images/bg.jpg); 
@@ -54,14 +159,15 @@
         ul li a {
             display: block;
             position: relative;
-            width: 100px;
-            height: 100px;
-            line-height: 100px;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
             font-size: 40px;
             text-align: center;
             text-decoration: none;
             color: #404040;
             margin: 0 30px;
+            margin-top: -125px;
             transition: .5s;
         }
 
@@ -203,45 +309,39 @@
         }
     </style>
 </head>
-
 <body>
-    
     <div class="container">
-        <!-- <div id="contact" class="section db"> -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="contact_form">
-                        <form id="contactForm" novalidate>
-                            <h3 style="color: #404040; font-size: 29px; text-align: center;">Contact Me</h3>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input class="form-control" id="name" type="text" placeholder="Your Name" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" id="email" type="email" placeholder="Your Email" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" id="phone" type="tel" placeholder="Your Phone" required>
-                                    </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="contact_form">
+                    <form id="contactForm" novalidate>
+                        <h3 style="text-align: center; color: #404040; font-size: 29px;">Contact Me</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input class="form-control" id="name" type="text" placeholder="Your Name" required>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <textarea class="form-control" id="message" placeholder="Your Message" required></textarea>
-                                    </div>
+                                <div class="form-group">
+                                    <input class="form-control" id="email" type="email" placeholder="Your Email" required>
                                 </div>
-                                <div class="col-lg-12 text-center">
-                                    <button id="sendMessageButton" class="btn btn-primary" type="submit">Send Message</button>
+                                <div class="form-group">
+                                    <input class="form-control" id="phone" type="tel" placeholder="Your Phone" required>
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" id="message" placeholder="Your Message" required></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 text-center">
+                                <button id="sendMessageButton" class="btn btn-primary" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-        <!-- </div> -->
+        </div>
     </div>
-
-    <!-- Social Media and Contact Buttons -->
     <ul>
         <li><a class="facebook" href="#"><span></span><span></span><span></span><span></span><i class="fab fa-facebook-f"></i></a></li>
         <li><a class="twitter" href="#"><span></span><span></span><span></span><span></span><i class="fab fa-twitter"></i></a></li>
@@ -250,11 +350,18 @@
         <li><a class="gmail" href="#"><span></span><span></span><span></span><span></span><i class="far fa-envelope"></i></a></li>
         <li><a class="skype" href="https://join.skype.com/invite/rP3dBFVpfpeP"><span></span><span></span><span></span><span></span><i class="fab fa-skype"></i></a></li>
         <li><a class="website" href="#"><span></span><span></span><span></span><span></span><i class="fas fa-globe"></i></a></li>
-    </ul>
-
-    <!-- JavaScript -->
+    </ul>  
+    <div class="footer-distributed">
+        <p class="footer-links">
+            <a href="#">Home</a>
+            <a href="about.html">Myself</a>
+            <a href="services.html">Services</a>
+            <a href="skill.html">Skill</a>
+            <a href="Contact.html">Contact</a>
+        </p>
+        <p class="footer-company-name">© 2024 Design By : Tirth Gajera</p>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
-
 </html>
