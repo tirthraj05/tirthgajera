@@ -32,9 +32,9 @@
 	.section-title p{
 		font-size: 14px;
 	}
-	#clouds{
-		margin-top: -35%;
-	}
+	/* #clouds{
+		margin-top: -10%;
+	} */
 	.message-box{
 		margin-bottom: 30px;
 	}
@@ -80,9 +80,11 @@
 	.section-title p{
 		font-size: 14px;
 	}
-	#clouds{
-		margin-top: -35%;
-	}
+	#clouds {
+		margin-top: -10%;
+		position: relative;
+		z-index: 1;
+	}	
 	.message-box{
 		margin-bottom: 30px;
 	}
@@ -128,9 +130,9 @@
 	.section-title p{
 		font-size: 14px;
 	}
-	#clouds{
-		margin-top: -35%;
-	}
+	/* #clouds{
+		margin-top: -10%;
+	} */
 	.message-box{
 		margin-bottom: 30px;
 	}
