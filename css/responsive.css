@@ -80,11 +80,11 @@
 	.section-title p{
 		font-size: 14px;
 	}
-	#clouds {
+	/* #clouds {
 		margin-top: -10%;
 		position: relative;
 		z-index: 1;
-	}	
+	}	 */
 	.message-box{
 		margin-bottom: 30px;
 	}
