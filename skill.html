@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Basic -->
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tirth Gajera</title>
+    <link rel="shortcut icon" href="images/tg.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<!-- Mobile Metas -->
-<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+}
 
-<!-- Site Metas -->
-<title>Tirth Gajera</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
-<meta name="author" content="">
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-<!-- Site Icons -->
-<link rel="shortcut icon" href="images/tg.ico" type="image/x-icon" />
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+.section {
+    padding: 35px 0;
+    padding-left: 120px;
+}
 
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<!-- Site CSS -->
-<link rel="stylesheet" href="style.css">
-<!-- Responsive CSS -->
-<link rel="stylesheet" href="css/responsive.css">
-<!-- Custom CSS -->
-<link rel="stylesheet" href="css/custom.css">
-<script src="js/modernizr.js"></script> <!-- Modernizr -->
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
 
-<style>
-    /* body {
-    background-color: #808080;
-} */
-
-    /* Styles for the menu bar */
-    .menu-bar {
+/* Navigation */
+.menu-bar {
     background-color: #333;
     overflow: hidden;
     width: 200px;
@@ -174,130 +183,20 @@
     align-items: center;
 }
 
-/* Style for the button text */
-.button-text {
-    margin-left: 10px;
-    /* Adjusted margin */
-    font-size: 18px;
+/* Skills */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-/* ------------ */
-/* We could use px but rem will adapt if the user changes the font size of the body. */
-/* Root variables for color scheme */
-:root {
-    --bar-graph-max-width: 15rem;
-    --bar-graph-min-color: #4CAF50; /* Lighter green for a vibrant look */
-    --bar-graph-max-color: #089F67; /* Darker green for depth */
-    --background-color: #333; /* Dark grey background matching the theme */
-    --text-color: #fff; /* White text for contrast */
-    --hover-effect: #555; /* Subtle hover effect color */
+.skill {
+    width: calc(50% - 20px);
+    margin: 10px;
 }
 
-html {
-    font-family: Arial, sans-serif; /* Modern, readable font */
-}
-
-/* body {
-    color: var(--text-color);
-    background: var(--background-color);
-    padding: 0 1rem;
-    margin: 0;
-} */
-
-body {
-    color: black;
-    background: #808080; /* Background color set to #808080 */
-    padding: 0 1rem;
-    margin: 0;
-}
-
-
-/* General styles for the skill bars */
-.bar-graph {
-    font-size: .9em; /* Slightly larger text inside the bar */
-    border-radius: 5px; /* Rounded corners for a smoother look */
-    overflow: hidden; /* Ensures the bar content stays within the borders */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Soft shadow for 3D effect */
-}
-
-.bar-graph > div {
-    padding: 8px 10px; /* Adequate padding for text */
-    text-align: right; /* Right-align for the text to appear at the end of the fill */
-    background-image: linear-gradient(
-        to right,
-        var(--bar-graph-min-color),
-        var(--bar-graph-max-color)
-    ); /* Gradient fill for the bars */
-    color: var(--text-color); /* Text color for readability */
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3); /* Inner shadow for depth */
-    transition: width 0.5s ease-in-out; /* Smooth transition for bar animation */
-}
-
-/* Dynamic width based on skill percentage */
-.bar-graph > div[data-pourcent] {
-    width: attr(data-pourcent percent); /* Width set by data attribute */
-}
-
-.menu-item a:hover, .menu-item a.active {
-    background-color: var(--hover-effect); /* Consistent hover effect */
-    color: #fff; /* Ensures text is readable on hover */
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-    .menu-bar {
-        width: 100%;
-        position: static;
-    }
-
-    .bar-graph {
-        max-width: 100%; /* Full width on smaller screens */
-    }
-}
-
-
-html {
-    font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-html,
-html[data-font-size="16px"] {
-    font-size: 16px; /* Default value. */
-}
-
-html[data-font-size="14px"] {
-    font-size: 14px;
-}
-
-html[data-font-size="20px"] {
-    font-size: 20px;
-}
-
-html[data-font-size="3vw"] {
-    font-size: 3vw;
-}
-
-body {
-    color: black;
-    background: #606060;
-    padding: 0 1rem;
-}
-
-fieldset {
-    display: inline-block;
-}
-
-fieldset .spaced label {
-    white-space: nowrap; /* Don't split the label on several lines. */
-    margin-right: .5em;
-}
-
-fieldset .spaced label:last-child {
-    margin-right: 0;
-}
-
-pre {
-    overflow-x: auto;
+.skill-name {
+    margin-bottom: 5px;
 }
 
 .bar-graph {
@@ -305,32 +204,41 @@ pre {
     border: 1px solid;
     border-radius: 1rem;
     max-width: var(--bar-graph-max-width);
-    background: rgba(0, 0, 0, .1); /* 10% transparent black. */
-    box-shadow: inset 0 .05rem .2rem rgba(0, 0, 0, .25); /* make it look deeper. */
+    background: rgba(0, 0, 0, .1);
+    box-shadow: inset 0 .05rem .2rem rgba(0, 0, 0, .25);
 }
 
 .bar-graph > div {
     box-sizing: border-box;
     color: black;
-    /* Effect to emboss the text. */
-    text-shadow: .05rem .05rem 0 rgba(255, 255, 255, 0.25), /* White bottom right reflexion. */
-                 -.05rem -.05rem 0 rgba(0, 0, 0, 0.1); /* Light top left shadow. */
+    text-shadow: .05rem .05rem 0 rgba(255, 255, 255, 0.25), -.05rem -.05rem 0 rgba(0, 0, 0, 0.1);
     padding: .1rem .5rem;
     border-radius: 1rem;
     text-align: right;
-    background-color: var(--bar-graph-max-color); /* In case the gradient isn't supported by an old browser. */
-    background-image: linear-gradient(
-        90deg,
-        var(--bar-graph-min-color) 0%,
-        var(--bar-graph-max-color) 100%
-    );
-    background-size: var(--bar-graph-max-width) 100%; /* Width should not be 100% but the skills max width. */
-    box-shadow: inset 0 .15rem .1rem rgba(255, 255, 255, .3), /* Make it look shining at the top. */
-                inset 0 -.1rem .2rem rgba(0, 0, 0, .3); /* Add a shadow below to make it bump out. */
+    background-color: var(--bar-graph-max-color);
+    background-image: linear-gradient(90deg, var(--bar-graph-min-color) 0%, var(--bar-graph-max-color) 100%);
+    background-size: var(--bar-graph-max-width) 100%;
+    box-shadow: inset 0 .15rem .1rem rgba(255, 255, 255, .3), inset 0 -.1rem .2rem rgba(0, 0, 0, .3);
 }
 
 /* Generate all the CSS selectors to set the length of the bar
    according to the value of the data-pourcent attribute. */
+   /* Style for the bars in the bar graph */
+.bar-graph > div {
+    box-sizing: border-box;
+    color: white; /* Text color */
+    text-shadow: .05rem .05rem 0 rgba(255, 255, 255, 0.25), -.05rem -.05rem 0 rgba(0, 0, 0, 0.1);
+    padding: .1rem .5rem;
+    border-radius: 1rem;
+    text-align: right;
+    background-color: #4CAF50; /* Green color */
+    /* Gradient background */
+    background-image: linear-gradient(90deg, #2E8B57 0%, #4CAF50 100%);
+    background-size: var(--bar-graph-max-width) 100%;
+    box-shadow: inset 0 .15rem .1rem rgba(255, 255, 255, .3), inset 0 -.1rem .2rem rgba(0, 0, 0, .3);
+}
+
+
 .bar-graph > div[data-pourcent="94"] {
     width: 94%;
 }
@@ -363,13 +271,37 @@ pre {
     width: 99%;
 }
 
-</style>
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .menu-bar {
+        width: 100%;
+        position: static;
+    }
 
-<head>
+    .skill {
+        width: 100%;
+    }
+}
+
+/* Footer */
+/* .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 87px;
+} */
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skill {
+        width: 100%;
+    }
+}
 
 
+    </style>
 </head>
-
 <body>
 
     <!-- Navigation -->
@@ -384,68 +316,71 @@ pre {
         <div class="menu-item"><a href="Contactform.html">Contact</a></div>
     </div>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <div id="testimonials" class="section wb">
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">My Skills</h2>
+                <div class="skills-container">
+                    <div class="skill">
+                        <div class="skill-name">HTML</div>
+                        <div class="bar-graph">
+                            <div data-pourcent="94">94%</div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">CSS</div>
+                        <div class="bar-graph">
+                            <div data-pourcent="91">91%</div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">JavaScript</div>
+                        <div class="bar-graph">
+                            <div data-pourcent="10">10%</div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">C language</div>
+                        <div class="bar-graph">
+                            <div data-pourcent="78">78%</div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">C++</div>
+                        <div class="bar-graph">
+                            <div data-pourcent="58">58%</div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Meta Ads</div>
+                        <div class="bar-graph">
+                            <div data-pourcent="58">58%</div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Meta Posting</div>
+                        <div class="bar-graph">
+                            <div data-pourcent="97">97%</div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">Creative Post</div>
+                        <div class="bar-graph">
+                            <div data-pourcent="99">99%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <!-- <footer class="footer">
         <div class="container">
-            <div class="section-title text-left">
+            <p>&copy; 2024 Tirth Gajera. All rights reserved.</p>
+        </div>
+    </footer> -->
 
-
-                <h3>My Skills</h3>
-                <!-- <p>We thanks for all our awesome testimonials! There are hundreds of our happy customers! </p> -->
-            </div><!-- end title -->
-
-            <div class="skill">
-              <div class="skill-bar">
-                  <div class="skill-name">HTML</div>
-                  <div class="bar-graph">
-                      <div data-pourcent="94">94%</div>
-                  </div>
-              </div>
-              <div class="skill-bar">
-                  <div class="skill-name">CSS</div>
-                  <div class="bar-graph">
-                      <div data-pourcent="91">91%</div>
-                  </div>
-              </div>
-              <div class="skill-bar">
-                  <div class="skill-name">JavaScript</div>
-                  <div class="bar-graph">
-                      <div data-pourcent="10">10%</div>
-                  </div>
-              </div>
-              <div class="skill-bar">
-                  <div class="skill-name">C language</div>
-                  <div class="bar-graph">
-                      <div data-pourcent="78">78%</div>
-                  </div>
-              </div>
-              <div class="skill-bar">
-                  <div class="skill-name">C++</div>
-                  <div class="bar-graph">
-                      <div data-pourcent="58">58%</div>
-                  </div>
-              </div>
-              <div class="skill-bar">
-                  <div class="skill-name">Meta Ads</div>
-                  <div class="bar-graph">
-                      <div data-pourcent="58">58%</div>
-                  </div>
-              </div>
-              <div class="skill-bar">
-                  <div class="skill-name">Meta Posting</div>
-                  <div class="bar-graph">
-                      <div data-pourcent="97">97%</div>
-                  </div>
-              </div>
-              <div class="skill-bar">
-                  <div class="skill-name">Creative Post</div>
-                  <div class="bar-graph">
-                      <div data-pourcent="99">99%</div>
-                  </div>
-              </div>
-          </div>
-
+    <script src="scripts.js"></script>
 </body>
-
 </html>
